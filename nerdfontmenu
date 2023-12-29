@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+cat "nerdfont.txt" | rofi -dmenu -i -p "Symbols" \
+  -no-show-icons -matching fuzzy -sort -sorting-method "fzf" |
+  awk '{printf "%s", $1}' | xsel -i -b
