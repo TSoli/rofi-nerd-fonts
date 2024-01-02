@@ -7,12 +7,10 @@
 
 ## Usage
 
-You will need to open the files with an editor that has a [Nerd Font](https://www.nerdfonts.com) installed for.
-
-### rofi
-
-A simple icon picker can be built with rofi (or dmenu) and the provided nerdfont.txt file. This picker will copy the icon to the clipboard (requires xsel installed)
+Put `nerdfontmenu` in your `$PATH` or a symlink to it. Ensure that `nerdfont.txt` is in the same location as the actual `nerdfontmenu` file. To open the menu run
 
 ```
-cat "nerdfont.txt" | rofi -dmenu -i | awk '{print $1}' | xsel -i -b
+nerdfontmenu
 ```
+
+The selection will be added to the clipboard.
